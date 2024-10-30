@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "60080936-D417-499D-BB92-63BDB24FD48E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3CBBBBD-67A0-4A83-B7DD-5D6555ABB394"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Todo&#x420;HeaderModule/View/TodoChoicePicker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "TodoChoicePicker"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CEC3193-6EDE-487A-8B6B-3F90CFA6FF83"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Todo&#x420;HeaderModule/View/TodoChoicePicker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8CEC3193-6EDE-487A-8B6B-3F90CFA6FF83 - a1d6f3d900ab4518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Todo.TodoChoicePicker.__allocating_init(frame: __C.CGRect) -&gt; Todo.TodoChoicePicker"
+                  moduleName = "Todo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/melaniad/Todo/Modules/Todo%D0%A0HeaderModule/View/TodoChoicePicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "8CEC3193-6EDE-487A-8B6B-3F90CFA6FF83 - ea129fb55038da4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Todo.TodoChoicePicker.init(frame: __C.CGRect) -&gt; Todo.TodoChoicePicker"
+                  moduleName = "Todo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/melaniad/Todo/Modules/Todo%D0%A0HeaderModule/View/TodoChoicePicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "85">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

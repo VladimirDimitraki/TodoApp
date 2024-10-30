@@ -10,14 +10,12 @@ import UIKit
 class TodoCellView: UITableViewCell {
     var titleLabel = TitleLabel()
     var descriptionLabel = DescriptionLabel()
-    
     let separator = UIView()
+    var dayLabel = DayLabel()
+    var isComleted = CompletedButton()
     
-    var createdData = UILabel()
-    var isComleted = UIButton()
-    
-    let padding: CGFloat = 15
-    let separatorPadding: CGFloat = 20
+    let paddingInsideCornerCell: CGFloat = 20
+    let paddingInsideCell: CGFloat = 10
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,6 +25,8 @@ class TodoCellView: UITableViewCell {
         contentView.addSubview(separator)
         contentView.addSubview(titleLabel)
         contentView.addSubview(descriptionLabel)
+        contentView.addSubview(dayLabel)
+        contentView.addSubview(isComleted)
         
         setupConstrains()
     }
@@ -39,21 +39,24 @@ class TodoCellView: UITableViewCell {
         separator.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        dayLabel.translatesAutoresizingMaskIntoConstraints = false
+        isComleted.translatesAutoresizingMaskIntoConstraints = false
         
         setSeparatorConstrains()
         setTitleLableConstrains()
         setDescriptionLabelConstrains()
+        setDateLabelConstrains()
+        setisCompletedButtonConstrains()
     }
 }
 
 extension TodoCellView {
     private func setSeparatorConstrains() {
         NSLayoutConstraint.activate([
-            separator.heightAnchor.constraint(equalToConstant: 1),
-            separator.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: padding),
-            separator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: separatorPadding),
-            separator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -separatorPadding),
-            separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25)
+            separator.heightAnchor.constraint(equalToConstant: 1.5),
+            separator.topAnchor.constraint(equalTo: contentView.centerYAnchor, constant: paddingInsideCell),
+            separator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: paddingInsideCornerCell),
+            separator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -paddingInsideCornerCell)
         ])
     }
 }
@@ -61,10 +64,9 @@ extension TodoCellView {
 extension TodoCellView {
     private func setTitleLableConstrains() {
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: padding),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25)
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: paddingInsideCornerCell),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: paddingInsideCornerCell),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -paddingInsideCornerCell)
         ])
     }
 }
@@ -72,11 +74,31 @@ extension TodoCellView {
 extension TodoCellView {
     private func setDescriptionLabelConstrains() {
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
-            descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            descriptionLabel.bottomAnchor.constraint(equalTo: titleLabel.bottomAnchor)
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: paddingInsideCornerCell),
+            descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -paddingInsideCornerCell),
         ])
     }
 }
 
+extension TodoCellView {
+    private func setDateLabelConstrains() {
+        NSLayoutConstraint.activate([
+            dayLabel.topAnchor.constraint(equalTo: separator.bottomAnchor, constant: 15),
+            dayLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: paddingInsideCornerCell),
+            dayLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -paddingInsideCornerCell),
+            dayLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -paddingInsideCornerCell)
+        ])
+    }
+}
+
+extension TodoCellView {
+    private func setisCompletedButtonConstrains() {
+        NSLayoutConstraint.activate([
+            isComleted.widthAnchor.constraint(equalToConstant: 30),
+            isComleted.heightAnchor.constraint(equalToConstant: 30),
+            isComleted.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -paddingInsideCornerCell),
+            isComleted.topAnchor.constraint(equalTo: contentView.topAnchor, constant: paddingInsideCornerCell)
+        ])
+    }
+}

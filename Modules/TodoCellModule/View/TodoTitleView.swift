@@ -10,7 +10,7 @@ import UIKit
 class TitleLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
-            configure()
+        configure()
     }
     
     required init?(coder: NSCoder) {

@@ -1,13 +1,13 @@
 //
-//  TodoCellDescriptionView.swift
+//  TodoTimeLabel.swift
 //  Todo
 //
-//  Created by Melania Dababi on 10/15/24.
+//  Created by Melania Dababi on 10/17/24.
 //
 
 import UIKit
 
-class DescriptionLabel: UILabel {
+class DayLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -19,7 +19,7 @@ class DescriptionLabel: UILabel {
     }
     
     private func configure() {
-        font = UIFont.systemFont(ofSize: 13)
-        textColor = Colors.descriptionColorGray
+        font = UIFont.boldSystemFont(ofSize: 14)
+        textColor = Colors.durkGrayColor
     }
 }
